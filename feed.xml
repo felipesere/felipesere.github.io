@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Felipe Sere</title>
+    <description>My path to craftsmanship.</description>
+    <link>http://felipesere.github.io//</link>
+    <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 26 Jan 2017 09:44:43 +0000</pubDate>
+    <lastBuildDate>Thu, 26 Jan 2017 09:44:43 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.2</generator>
+    
+      <item>
+        <title>Fast feedback with RSpec and rerun</title>
+        <description>&lt;p&gt;Recently &lt;a href=&quot;https://twitter.com/CharlotteBRF/status/824251562428076034&quot;&gt;this&lt;/a&gt; tweet scrolled across my time-line about using &lt;code class=&quot;highlighter-rouge&quot;&gt;--fail-fast&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Super blog from &lt;a href=&quot;https://twitter.com/nikeshashar&quot;&gt;@nikeshashar&lt;/a&gt; on failing fast with &lt;a href=&quot;https://twitter.com/hashtag/RSpec?src=hash&quot;&gt;#RSpec&lt;/a&gt; &lt;a href=&quot;https://t.co/PZF3tXulay&quot;&gt;https://t.co/PZF3tXulay&lt;/a&gt; ..all those &lt;a href=&quot;https://twitter.com/codewars&quot;&gt;@codewars&lt;/a&gt;  tests feel worth it! cc &lt;a href=&quot;https://twitter.com/felipesere&quot;&gt;@felipesere&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dr Charlotte Fereday (@CharlotteBRF) &lt;a href=&quot;https://twitter.com/CharlotteBRF/status/824251562428076034&quot;&gt;January 25, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;--fail-fast&lt;/code&gt; with RSpec means the very first failure that RSpec encounters will halt the entire suite.
+Passing tests give a sense achievement, but failing tests show where more work is needed.
+Furthermore, getting many cascading failures (indicative of a potential design issue!) are distracting and overwhelming.
+Using &lt;code class=&quot;highlighter-rouge&quot;&gt;--fail-fast&lt;/code&gt; limits the amount of failures we need to concentrate at any given time.&lt;/p&gt;
+
+&lt;p&gt;But there is more.
+Switching between your editor and terminal, followed by running &lt;code class=&quot;highlighter-rouge&quot;&gt;rspec --fail-fast&lt;/code&gt; (potentailly hitting up-arrow multiple times) adds
+an additional context switch and is distracting. I catch myself “over-tabbing” to my twitter timeline in Chrome every once in a while, just saying.
+What we we didn’t have to manually run our tests?
+Enter &lt;a href=&quot;https://github.com/alexch/rerun&quot;&gt;rerun&lt;/a&gt;.
+Install it with&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   gem install rerun
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and then run&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  rerun -cx &lt;span class=&quot;s2&quot;&gt;&quot;rspec --fail-fast
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s decompose that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;-c will clear the screen, so you are not distracted by previous successes/failures&lt;/li&gt;
+  &lt;li&gt;-x expect rspec to ‘exit’, meaning we know its a one-shot command and not a server (that needs to halted)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are a couple of ways to improve this even further.
+For example, if you install &lt;a href=&quot;https://github.com/julienXX/terminal-notifier&quot;&gt;terminal-notifier&lt;/a&gt; then you can have notifications
+pop up in the notification center. This is nice if you work in Sublime or Atom and you feel like you’d loose too much screen space
+by having a command line open in parallel.&lt;/p&gt;
+
+&lt;p&gt;Another cool parameter is &lt;code class=&quot;highlighter-rouge&quot;&gt;-p &quot;**/*.something&quot;&lt;/code&gt; which lets you watch for certain files. Rerun is setup to watch for common files (Ruby, SCSS, JS, and some others),
+but it is happy to work with any pattern you want.&lt;/p&gt;
+
+&lt;p&gt;So there you, have &lt;code class=&quot;highlighter-rouge&quot;&gt;rerun&lt;/code&gt; run your tests for you.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 25 Jan 2017 20:31:36 +0000</pubDate>
+        <link>http://felipesere.github.io//2017/fast-feedback-with-rspec-and-rerun/</link>
+        <guid isPermaLink="true">http://felipesere.github.io//2017/fast-feedback-with-rspec-and-rerun/</guid>
+        
+        <category>testing</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Walking down the path again</title>
+        <description>&lt;p&gt;I’ve decided to start blogging again.
+Not about anything in particular or for any particular audience.
+Just for me to gather my thoughts on things around code and craftsmanship.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jan 2016 13:04:23 +0000</pubDate>
+        <link>http://felipesere.github.io//2016/walking-down-the-path-again/</link>
+        <guid isPermaLink="true">http://felipesere.github.io//2016/walking-down-the-path-again/</guid>
+        
+        <category>personal</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
+    
+  </channel>
+</rss>
