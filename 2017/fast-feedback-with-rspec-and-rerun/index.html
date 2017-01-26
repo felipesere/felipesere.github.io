@@ -158,7 +158,7 @@ Using <code class="highlighter-rouge">--fail-fast</code> limits the amount of fa
 <p>But there is more.
 Switching between your editor and terminal, followed by running <code class="highlighter-rouge">rspec --fail-fast</code> (potentailly hitting up-arrow multiple times) adds
 an additional context switch and is distracting. I catch myself “over-tabbing” to my twitter timeline in Chrome every once in a while, just saying.
-What we we didn’t have to manually run our tests?
+What if we didn’t have to manually run our tests?
 Enter <a href="https://github.com/alexch/rerun">rerun</a>.
 Install it with</p>
 
@@ -184,7 +184,8 @@ For example, if you install <a href="https://github.com/julienXX/terminal-notifi
 pop up in the notification center. This is nice if you work in Sublime or Atom and you feel like you’d loose too much screen space
 by having a command line open in parallel.</p>
 
-<p>Another cool parameter is <code class="highlighter-rouge">-p "**/*.something"</code> which lets you watch for certain files. Rerun is setup to watch for common files (Ruby, SCSS, JS, and some others),
+<p>Another cool parameter is <code class="highlighter-rouge">-p "**/*.something"</code> which lets you watch for certain files.
+Rerun is setup to watch for common files (Ruby, SCSS, JS, and some others),
 but it is happy to work with any pattern you want.</p>
 
 <p>So there you, have <code class="highlighter-rouge">rerun</code> run your tests for you.</p>

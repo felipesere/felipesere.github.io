@@ -5,8 +5,8 @@
     <description>My path to craftsmanship.</description>
     <link>http://felipesere.github.io//</link>
     <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 26 Jan 2017 09:44:43 +0000</pubDate>
-    <lastBuildDate>Thu, 26 Jan 2017 09:44:43 +0000</lastBuildDate>
+    <pubDate>Thu, 26 Jan 2017 09:49:20 +0000</pubDate>
+    <lastBuildDate>Thu, 26 Jan 2017 09:49:20 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -24,7 +24,7 @@ Using &lt;code class=&quot;highlighter-rouge&quot;&gt;--fail-fast&lt;/code&gt; l
 &lt;p&gt;But there is more.
 Switching between your editor and terminal, followed by running &lt;code class=&quot;highlighter-rouge&quot;&gt;rspec --fail-fast&lt;/code&gt; (potentailly hitting up-arrow multiple times) adds
 an additional context switch and is distracting. I catch myself “over-tabbing” to my twitter timeline in Chrome every once in a while, just saying.
-What we we didn’t have to manually run our tests?
+What if we didn’t have to manually run our tests?
 Enter &lt;a href=&quot;https://github.com/alexch/rerun&quot;&gt;rerun&lt;/a&gt;.
 Install it with&lt;/p&gt;
 
@@ -50,7 +50,8 @@ For example, if you install &lt;a href=&quot;https://github.com/julienXX/termina
 pop up in the notification center. This is nice if you work in Sublime or Atom and you feel like you’d loose too much screen space
 by having a command line open in parallel.&lt;/p&gt;
 
-&lt;p&gt;Another cool parameter is &lt;code class=&quot;highlighter-rouge&quot;&gt;-p &quot;**/*.something&quot;&lt;/code&gt; which lets you watch for certain files. Rerun is setup to watch for common files (Ruby, SCSS, JS, and some others),
+&lt;p&gt;Another cool parameter is &lt;code class=&quot;highlighter-rouge&quot;&gt;-p &quot;**/*.something&quot;&lt;/code&gt; which lets you watch for certain files.
+Rerun is setup to watch for common files (Ruby, SCSS, JS, and some others),
 but it is happy to work with any pattern you want.&lt;/p&gt;
 
 &lt;p&gt;So there you, have &lt;code class=&quot;highlighter-rouge&quot;&gt;rerun&lt;/code&gt; run your tests for you.&lt;/p&gt;
