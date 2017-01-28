@@ -5,9 +5,39 @@
     <description>My path to craftsmanship.</description>
     <link>http://felipesere.github.io//</link>
     <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 26 Jan 2017 09:52:14 +0000</pubDate>
-    <lastBuildDate>Thu, 26 Jan 2017 09:52:14 +0000</lastBuildDate>
+    <pubDate>Sat, 28 Jan 2017 22:58:02 +0000</pubDate>
+    <lastBuildDate>Sat, 28 Jan 2017 22:58:02 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
+    
+      <item>
+        <title>Hashtag Impostor Syndrome</title>
+        <description>&lt;p&gt;I came to a realization today:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I feel greater impostor syndrome on Twitter than at home or the workplace.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let me fill in some context. In the last weeks, we have begun training an employee to become a “craftsmanship coach”. The idea is that he will work with us to learn values of craftsmanship.&lt;/p&gt;
+
+&lt;p&gt;Once our engagement has ended, he will be the driving factor pushing the company forward. As part of that &lt;em&gt;apprenticeship&lt;/em&gt; that employee will be writing code, giving talks and writing blogs. That prompted me to resurrect my personal blog and try to engage more with the internet. I intend to do so by writing on this blog, going to meetups and events, and post my ideas on Twitter.&lt;/p&gt;
+
+&lt;p&gt;As I was about to tweet out a sketch of an idea about ‘iteration planning’ it hit me: I was afraid of putting a prominent #hashtag on it. I was unsure whether my idea was right, new, or good. What would people think? Who am I to Big-Important-Hashtags on my little tweet and claim relevance? Here is the tweet:&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Sketch on &amp;quot;Why &lt;a href=&quot;https://twitter.com/hashtag/planning?src=hash&quot;&gt;#planning&lt;/a&gt; beyond a horizon adds little value&amp;quot;. &lt;a href=&quot;https://twitter.com/hashtag/openlearning?src=hash&quot;&gt;#openlearning&lt;/a&gt; cc &lt;a href=&quot;https://twitter.com/AntonyMarcano&quot;&gt;@AntonyMarcano&lt;/a&gt; &lt;a href=&quot;https://t.co/Cj0Mr2t2VV&quot;&gt;pic.twitter.com/Cj0Mr2t2VV&lt;/a&gt;&lt;/p&gt;&amp;mdash; Felipe Sere (@felipesere) &lt;a href=&quot;https://twitter.com/felipesere/status/824393103968706560&quot;&gt;January 25, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;I decided to tweet with a #hashtag which a friend of mine had mentioned in a similar tweet of his: #openlearning. That #hashtag made me feel easier about the tweet. It was a learning experience. If someone looked the tweet, took the time to reply to it, then I’d sure get even more value and learning from it. My idea did not need to be perfect to share it on the internet. The input from other people would help me refine it and allow me to strike a conversation with peers.&lt;/p&gt;
+
+&lt;p&gt;My next &lt;a href=&quot;https://twitter.com/search?q=%23openlearning&amp;amp;src=typd&quot;&gt;#openlearning&lt;/a&gt; tweet might gain more traction and the  discussion around it will be fruitful.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 28 Jan 2017 20:23:35 +0000</pubDate>
+        <link>http://felipesere.github.io//2017/hashtag-impostor-syndrome/</link>
+        <guid isPermaLink="true">http://felipesere.github.io//2017/hashtag-impostor-syndrome/</guid>
+        
+        <category>personal</category>
+        
+        
+      </item>
     
       <item>
         <title>Fast feedback with RSpec and rerun</title>
