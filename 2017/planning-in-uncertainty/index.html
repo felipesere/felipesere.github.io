@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Categories</title>
+  <title>Planning In Uncertainty</title>
   <meta name="description" content="My path to craftsmanship.">
   <meta name="author" content="Felipe Sere">
   <meta name="HandheldFriendly" content="True">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://felipesere.github.io//categories/">
+  <link rel="canonical" href="http://felipesere.github.io//2017/planning-in-uncertainty/">
   <link rel="alternate" type="application/rss+xml" title="Felipe Sere" href="/feed.xml">
   <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -146,40 +146,51 @@
 
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
-        <h2>Categories:</h2>
-<div class="categories"> 
- 
-  <a href="#personal">personal</a>
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="30 Jan 2017" class="post-meta__date date">30 Jan 2017</time> &#8226; <span class="post-meta__tags">on </span>
+    </div>
+    <h1 class="post-title">Planning In Uncertainty</h1>
+  </header>
 
-</div>
+  <section class="post">
+    <p>Over the last year, I have attended 3 or 4 Release Train Planning (RTP) meetings. In these meetings, the entire team came together and planned out the next release. A release is roughly a three month period, made up of 6 two-week iterations. The way these meetings are run is that the objective of a given release is introduced by a business representative and teams break down the work into stories which are mapped against the 6 iterations. All the teams taking part in the release then come back together to present their plan, synchronize it with the other teams and commit to results and dates.</p>
 
-<!-- iterate through all categories on the site --> 
- 
-  <!-- for each tag, create an anchor by using the tag name as an id --> 
-  <div id="personal">  
-    <h3> personal </h3>  <!-- for create a heading --> 
+<p>The rigidity of this ritual struck me as odd. When the mics were off, people spoke about these plans and the fact that they always change anyway as the deadline approaches. No real surprise there. The odd thing was that everybody went along, put effort into a plan, re-jigged it to line up with another teams plan, and then committed to delivering this fine master-piece of Gantt charts. All in a 3-day effort by about 50 or 60 people.</p>
 
-    <ul> <!-- create the list of posts -->
-      <!-- iterate through all the posts on the site --> 
-       
-        <!-- list only those which contain the current tag --> 
-        
-       
-        <!-- list only those which contain the current tag --> 
-        
-       
-        <!-- list only those which contain the current tag --> 
-        
-       
-        <!-- list only those which contain the current tag --> 
-         
-            <li>
-              <a href="//2016/walking-down-the-path-again/">Walking down the path again</a>
-            </li>
-        
-      
-    </ul>
-  </div>
+<p>Somebody somewhere must have left those RTP feeling happy and confident in the plans. But knowing that future plans have an increasing chance of not coming to fruition, that time spent planning could have been spent elsewhere.</p>
+
+<p>Uncertainty is an important factor when planning. Not only is there uncertainty on how to execute a given task, but there is also uncertainty on whether to execute it at all, what needs to happen before it, or whether it needs to be re-thought. Let’s put the uncertainty on a graph against the time we intend to execute on the plans:</p>
+
+<p><img src="/images/doubt-and-plans.jpg" alt="Plans made for the distant future have more uncertainty" /></p>
+
+<p>Plans made for the next couple of days are fairly certain, while plans for things months from now are pretty much anyone’s guess.  Think about the last 5-6 months of your last project: requirements changed, deadlines moved, earlier tasks unearthed a new set of challenges or unexpected opportunities. All of this will put your perfectly drawn Gantt chart out of whack.</p>
+
+<p>Let’s return to the RTP, where we planned our next 4-5 months of development, cramming each iteration with stories until they are full. The image below shows a fictional team board, with the necessary stories for the next 6 iterations, overlayed by a red line showing the increasing doubts as plans are further in the future:</p>
+
+<p><img src="/images/doubt-story-board.PNG" alt="Stories within a  release, with the doubt overlayed" /></p>
+
+<p>The color coding should show how at risk these stories are. From the top left (urgent and critical) in blue to the bottom right (neither urgent nor important) in red. The yellow stories are somewhere in between. An interesting observation is that the top story in iteration 3 is blue, while the third and fourth stories in iteration 2 are yellow. The blue story in iteration 3 is going to be the highest priority in that iteration, while the other two yellow ones are a low priority, meaning they could be dropped or changed. Now keep in mind, we are still planning ahead. We have not completed any of the stories.</p>
+
+<p>The uncertainty lines help us in deciding whether there is value in planning stories underneath it. It helps us focus on the right now of the important tasks, rather than spending precious time planing future stories, let alone future unimportant stories.</p>
+
+<p>So how should we plan? Many, many, many small plans for a near-future horizon. Concentrating the entire planning into three days for 4 months is a recipe for disaster. There is no wiggle-room. No space for learning. No space for adjusting. Too many wheels are in motion and too many interdependencies are in play.</p>
+
+<p>To make the effect of many smaller plannings clearer, let’s see how they fare with the uncertainty. The next image shows three simplified views of the board, once before the first, second, and third iteration.</p>
+
+<p><img src="/images/multiple-iterations-planning.jpg" alt="Smaller, more frequent iteration plannings." /></p>
+
+<p>As you can see, the planning horizon was kept short: next iteration and a story or two for the iterations after that. Only the current iteration was packed with stories. All other iterations were left with some breathing room, giving the team some breathing room to react to new information. Important stories or features which the team had to address at some point (important, but not urgent) were put on the board, but their iterations definitely not filled.</p>
+
+<p>It is tempting to go for the <em>big plan</em>. To lay out all the cards on the table. To get everybody together, and for once get everybody to agree to plan <em>and stick to it</em>. Sadly, the underlying closed-world assumptions (we know all the facts in advance) rarely holds true. Smaller, more frequent plans give you the necessary freedom to change direction. To adjust and react to new events. I urge you to give it a try. The beauty of trying this idea: if it doesn’t work out for you, you have at most lost an iteration or two, instead of an entire release. Isn’t that something worth trying?</p>
+
+
+  </section>
+  
+</article>
+
+
 
       </div>
 
