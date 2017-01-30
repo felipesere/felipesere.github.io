@@ -5,8 +5,8 @@
     <description>My path to craftsmanship.</description>
     <link>http://felipesere.github.io//</link>
     <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 30 Jan 2017 13:05:22 +0000</pubDate>
-    <lastBuildDate>Mon, 30 Jan 2017 13:05:22 +0000</lastBuildDate>
+    <pubDate>Mon, 30 Jan 2017 21:01:19 +0000</pubDate>
+    <lastBuildDate>Mon, 30 Jan 2017 21:01:19 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -17,7 +17,8 @@
 
 &lt;p&gt;Somebody somewhere must have left those RTP feeling happy and confident in the plans. But knowing that future plans have an increasing chance of not coming to fruition, that time spent planning could have been spent elsewhere.&lt;/p&gt;
 
-&lt;p&gt;Uncertainty is an important factor when planning. Not only is there uncertainty on how to execute a given task, but there is also uncertainty on whether to execute it at all, what needs to happen before it, or whether it needs to be re-thought. Let’s put the uncertainty on a graph against the time we intend to execute on the plans:&lt;/p&gt;
+&lt;p&gt;Uncertainty is an important factor when planning. Not only is there uncertainty on how to execute a given task, but there is also uncertainty on whether to execute it at all.
+What needs to happen before it, or whether it needs to be re-thought. Let’s put the uncertainty on a graph against the time we intend to execute on the plans:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/doubt-and-plans.jpg&quot; alt=&quot;Plans made for the distant future have more uncertainty&quot; /&gt;&lt;/p&gt;
 
@@ -37,7 +38,9 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/multiple-iterations-planning.jpg&quot; alt=&quot;Smaller, more frequent iteration plannings.&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As you can see, the planning horizon was kept short: next iteration and a story or two for the iterations after that. Only the current iteration was packed with stories. All other iterations were left with some breathing room, giving the team some breathing room to react to new information. Important stories or features which the team had to address at some point (important, but not urgent) were put on the board, but their iterations definitely not filled.&lt;/p&gt;
+&lt;p&gt;As you can see, the planning horizon was kept short: next iteration and a story or two for the iterations after that. Only the current iteration was packed with stories. All other iterations were left with some space, giving the team some breathing room to react to new information. Important stories or features which the team had to address at some point (important, but not urgent) were put on the board, but their iterations definitely not filled.&lt;/p&gt;
+
+&lt;!-- Add a block where this would not apply --&gt;
 
 &lt;p&gt;It is tempting to go for the &lt;em&gt;big plan&lt;/em&gt;. To lay out all the cards on the table. To get everybody together, and for once get everybody to agree to plan &lt;em&gt;and stick to it&lt;/em&gt;. Sadly, the underlying closed-world assumptions (we know all the facts in advance) rarely holds true. Smaller, more frequent plans give you the necessary freedom to change direction. To adjust and react to new events. I urge you to give it a try. The beauty of trying this idea: if it doesn’t work out for you, you have at most lost an iteration or two, instead of an entire release. Isn’t that something worth trying?&lt;/p&gt;
 
