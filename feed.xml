@@ -5,9 +5,60 @@
     <description>My path to craftsmanship.</description>
     <link>http://felipesere.github.io//</link>
     <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 09 Feb 2017 15:12:06 +0000</pubDate>
-    <lastBuildDate>Thu, 09 Feb 2017 15:12:06 +0000</lastBuildDate>
+    <pubDate>Thu, 09 Feb 2017 15:17:53 +0000</pubDate>
+    <lastBuildDate>Thu, 09 Feb 2017 15:17:53 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
+    
+      <item>
+        <title>Contemplating the Backlog</title>
+        <description>&lt;p&gt;We were recently talking about the backlog of user stories for a project on the near horizon. We wanted to create an exemplary backlog with meaningful stories that would allow the team succeed. The backlog should also show the less technical side of the organisation that they needn’t deliver all functionality in one large push. When the question of which story to tackle first came up, “do the most important thing” didn’t feel good enough.&lt;/p&gt;
+
+&lt;p&gt;The user story backlog is linear so that the team has an obvious point from where to pull in the next piece of work. Yet there are many aspects that make a story important:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It has (real or perceived) value to customer, which we will harvest when the story is completed.&lt;/li&gt;
+  &lt;li&gt;It carries risk to the business, the customer, and the development team itself.&lt;/li&gt;
+  &lt;li&gt;It unlocks knowledge, which enables and impacts future stories.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With this in mind we can compare the stories along those three axes and come up with different ways of sorting our backlog, which in turn reflect upon our business priorities and project phase.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/contemplating-user-stories.jpg&quot; alt=&quot;Contemplating user stories&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reward-driven-backlog&quot;&gt;Reward driven backlog&lt;/h3&gt;
+
+&lt;p&gt;Sorting user stories by their real or perceived value is a good initial strategy, if recuperating our costs is a priority. This kind of optimization works for teams that are short on cash and may not even get through the entire backlog. The moment we deliver a story that adds significant benefit to our customers, we become a valued partner. In environments that are driven by reducing costs, delivering some piece of functionality that reduces the costs or increases the value, may result in compounding effects for the bottom line.&lt;/p&gt;
+
+&lt;p&gt;For the purpose of comparing user stories, the value of a user story can be roughly approximated. Should no real data be available, a back-of-the-napkin calculation or an educated guess is enough to decide between two stories most of the time.&lt;/p&gt;
+
+&lt;h3 id=&quot;risk-driven-backlog&quot;&gt;Risk driven backlog&lt;/h3&gt;
+
+&lt;p&gt;More often than not reward is tied to risk. Adding a feature that might benefit 80% of our user base also means that we run the risk of disgruntling 80% of our users. Think of a “Todo” application, where we decide to add a smart sorting algorithm that intelligently rearranges the todos by priority and due date. If it works, every user will get a pretty smart todo list. If we introduce a flaw, we are damaging the core functionality of our app for every user.&lt;/p&gt;
+
+&lt;p&gt;So a user story “sorting” strategy is to work on stories which minimize risk by having a low overall impact. Those stories are a safe place to experiment and get to grips with the domain that we are working in. This is a decent strategy for well-established systems that have a steady, loyal customer base. Or systems that are relied upon by other production systems. It also involves a significant time and financial investment as the less risky stories might not be the most rewarding.&lt;/p&gt;
+
+&lt;h3 id=&quot;knowledge-driven-backlog&quot;&gt;Knowledge driven backlog&lt;/h3&gt;
+
+&lt;p&gt;All projects will have aspects to them that the team has not encountered before. You may need to connect bespoke systems that were not designed to do so. Or you may need to process something completely different than before. Stories that enable you to go and find (or discard!) potential solutions are not directly tied to customer value. They are valuable to the team and create opportunities to unlock further stories.&lt;/p&gt;
+
+&lt;p&gt;If you are treading in uncharted territory prioritising stories that will unlock further stories becomes a winning strategy. Such stories are sometimes called ‘spikes’, though I prefer the term ‘experiments’. Experiments emphasise that we are walking into unknown territory and that an answer might be “we pushed it far, but we couldn’t make it work in time”. Even cutting corners is OK with an experiment, as long there is a lesson to be learnt.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-blend&quot;&gt;A Blend&lt;/h3&gt;
+
+&lt;p&gt;All three of the above approaches are valid, and as usual the key is in finding the right blend for the current backlog. As the project progresses through different phases, a different aspect of a user story will have more pull. Teams in the early development stages will probably benefit the most from a few knowledge stories to find their way through the technology and domain. As the project begins to take shape, recuperating some of the costs and building trust with stakeholders will likely mean a shift towards reward stories. Finally, as the project reaches maturity, a more careful risk-driven approach might be better suited. Granted that at any moment the focus can shift. Understanding that stories can fall into any (and maybe even many) of the categories gives us a tool to compare and better understand our backlog.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Extra&lt;/strong&gt;: If you want to read more about different phases of a team/project and how that affects estimates,teams, and money and may others, take a look at &lt;a href=&quot;https://www.facebook.com/notes/kent-beck/comparing-explore-expand-and-extract-topics-in-3x/1241983035834558&quot;&gt;Kent Becks 3X&lt;/a&gt; and how that is evolving.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Feb 2017 22:03:35 +0000</pubDate>
+        <link>http://felipesere.github.io//2017/contemplating-the-backlog/</link>
+        <guid isPermaLink="true">http://felipesere.github.io//2017/contemplating-the-backlog/</guid>
+        
+        
+        <category>team</category>
+        
+        <category>agile</category>
+        
+      </item>
     
       <item>
         <title>Planning In Uncertainty</title>
@@ -48,6 +99,10 @@ What needs to happen before it, or whether it needs to be re-thought. Let’s pu
         <link>http://felipesere.github.io//2017/planning-in-uncertainty/</link>
         <guid isPermaLink="true">http://felipesere.github.io//2017/planning-in-uncertainty/</guid>
         
+        
+        <category>team</category>
+        
+        <category>agile</category>
         
       </item>
     
