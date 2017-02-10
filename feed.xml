@@ -5,12 +5,12 @@
     <description>My path to craftsmanship.</description>
     <link>http://felipesere.github.io//</link>
     <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 09 Feb 2017 18:50:35 +0000</pubDate>
-    <lastBuildDate>Thu, 09 Feb 2017 18:50:35 +0000</lastBuildDate>
+    <pubDate>Fri, 10 Feb 2017 11:31:52 +0000</pubDate>
+    <lastBuildDate>Fri, 10 Feb 2017 11:31:52 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
-        <title>The Value Of A Story</title>
+        <title>Contemplating The Backlog</title>
         <description>&lt;p&gt;We were recently talking about the backlog of user stories for a project on the near horizon. We wanted to create an exemplary backlog with meaningful stories that would allow the team succeed. The backlog should also show the less technical side of the organisation that they needn’t deliver all functionality in one large push. When the question of which story to tackle first came up, “do the most important thing” didn’t feel good enough.&lt;/p&gt;
 
 &lt;p&gt;The user story backlog is linear so that the team has an obvious point from where to pull in the next piece of work. Yet there are many aspects that make a story important:&lt;/p&gt;
