@@ -5,13 +5,13 @@
     <description>My path to craftsmanship.</description>
     <link>http://felipesere.github.io//</link>
     <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 10 Feb 2017 11:31:52 +0000</pubDate>
-    <lastBuildDate>Fri, 10 Feb 2017 11:31:52 +0000</lastBuildDate>
+    <pubDate>Sat, 11 Feb 2017 15:43:41 +0000</pubDate>
+    <lastBuildDate>Sat, 11 Feb 2017 15:43:41 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
         <title>Contemplating The Backlog</title>
-        <description>&lt;p&gt;We were recently talking about the backlog of user stories for a project on the near horizon. We wanted to create an exemplary backlog with meaningful stories that would allow the team succeed. The backlog should also show the less technical side of the organisation that they needn’t deliver all functionality in one large push. When the question of which story to tackle first came up, “do the most important thing” didn’t feel good enough.&lt;/p&gt;
+        <description>&lt;p&gt;We were recently talking about the backlog of user stories for a project on the near horizon. We wanted to create an exemplary backlog with meaningful stories that would allow the team to succeed. The backlog should also show the less technical side of the organisation that they needn’t deliver all functionality in one large push. When the question of which story to tackle first came up, “do the most important thing” didn’t feel good enough.&lt;/p&gt;
 
 &lt;p&gt;The user story backlog is linear so that the team has an obvious point from where to pull in the next piece of work. Yet there are many aspects that make a story important:&lt;/p&gt;
 
@@ -47,7 +47,7 @@
 
 &lt;p&gt;All three of the above approaches are valid, and as usual the key is in finding the right blend for the current backlog. As the project progresses through different phases, a different aspect of a user story will have more pull. Teams in the early development stages will probably benefit the most from a few knowledge stories to find their way through the technology and domain. As the project begins to take shape, recuperating some of the costs and building trust with stakeholders will likely mean a shift towards reward stories. Finally, as the project reaches maturity, a more careful risk-driven approach might be better suited. Granted that at any moment the focus can shift. Understanding that stories can fall into any (and maybe even many) of the categories gives us a tool to compare and better understand our backlog.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Extra&lt;/strong&gt;: If you want to read more about different phases of a team/project and how that affects estimates,teams, and money and may others, take a look at &lt;a href=&quot;https://www.facebook.com/notes/kent-beck/comparing-explore-expand-and-extract-topics-in-3x/1241983035834558&quot;&gt;Kent Becks 3X&lt;/a&gt; and how that is evolving.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Extra&lt;/strong&gt;: If you want to read more about different phases of a team/project and how that affects estimates,teams, and money and many others, take a look at &lt;a href=&quot;https://www.facebook.com/notes/kent-beck/comparing-explore-expand-and-extract-topics-in-3x/1241983035834558&quot;&gt;Kent Becks 3X&lt;/a&gt; and how that is evolving.&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 08 Feb 2017 22:03:35 +0000</pubDate>
         <link>http://felipesere.github.io//2017/contemplating-the-backlog/</link>
