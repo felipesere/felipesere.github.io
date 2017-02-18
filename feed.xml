@@ -5,9 +5,133 @@
     <description>My path to craftsmanship.</description>
     <link>http://felipesere.github.io//</link>
     <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 18 Feb 2017 10:28:45 +0000</pubDate>
-    <lastBuildDate>Sat, 18 Feb 2017 10:28:45 +0000</lastBuildDate>
+    <pubDate>Sat, 18 Feb 2017 10:40:25 +0000</pubDate>
+    <lastBuildDate>Sat, 18 Feb 2017 10:40:25 +0000</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>The ELM Confusion</title>
+        <description>&lt;p&gt;Today I think I may (possibly) have understood something about ELM. Before we look at some code, here is the 5sec intro into ELM: ELM is essentially a Haskell that runs in the browser. It makes an enormous effort to have a friendly and helpful compiler. And it succeeds at it! It promises zero runtime errors, has a strong type system and comes with a batteries-included architecture that is supposed to result in easy to maintain web apps.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-setup&quot;&gt;The setup&lt;/h3&gt;
+
+&lt;p&gt;I am currently experimenting with porting a few Angular components over to ELM to see how it compares. One interesting aspect is that I get data from a remote system. From a previous experience, I had a hunch that ‘async’ code in ELM quickly got me confused with &lt;code class=&quot;highlighter-rouge&quot;&gt;Task&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Cmd&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Msg&lt;/code&gt; (the last one is an app-specific custom type).&lt;/p&gt;
+
+&lt;p&gt;But this time all went smooth. Here is the code to read some data from an endpoint and parsing the resulting JSON:&lt;/p&gt;
+
+&lt;div class=&quot;language-haskell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;getData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Cmd&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Msg&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;getData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;let&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://localhost:3001/people&quot;&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt;
+      &lt;span class=&quot;kt&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NewData&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The focus point of this post will be that function and the inconspicuous NewData.NewData is a custom union type that represents what messages my application will react to:&lt;/p&gt;
+
+&lt;div class=&quot;language-haskell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Msg&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MorePeople&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NewData&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Result&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The above code was just happily living in the initial &lt;strong&gt;App.elm&lt;/strong&gt; file, which was fine for the beginning.&lt;/p&gt;
+
+&lt;p&gt;The challenge I set myself was to separate the concern &lt;em&gt;“getting data from a remote system”&lt;/em&gt; from the general flow of my application, which is encoded in an &lt;em&gt;update&lt;/em&gt; function and the corresponding &lt;em&gt;Msg&lt;/em&gt; type.&lt;/p&gt;
+
+&lt;h3 id=&quot;naive-approach&quot;&gt;Naive approach&lt;/h3&gt;
+
+&lt;p&gt;Naive as I was, I just moved the &lt;code class=&quot;highlighter-rouge&quot;&gt;getData&lt;/code&gt; function over to the &lt;strong&gt;Data.elm&lt;/strong&gt; file (&lt;em&gt;a poor name in hindsight&lt;/em&gt;) and fixed some of the imports. Sadly, the compiler was not happy about this:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; ./src/Main.elm
+Module build failed: Error: Compiler process exited with error Compilation failed
+-- NAMING ERROR ------------------------------------------------- ./src/Data.elm
+
+Cannot find variable &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;NewData&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+22|       Http.send NewData request
+                    ^^^^^^^
+Maybe you want one of the following?
+
+    getData
+
+-- NAMING ERROR ------------------------------------------------- ./src/Data.elm
+
+Cannot find &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;Msg&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+16| getData : Cmd Msg
+                  ^^^
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;OK. I can understand that. I’ve obviously not imported &lt;code class=&quot;highlighter-rouge&quot;&gt;Msg&lt;/code&gt; and by extension &lt;code class=&quot;highlighter-rouge&quot;&gt;NewData&lt;/code&gt;. Hmm.. That type lives in the &lt;strong&gt;App&lt;/strong&gt; module, which imports the &lt;strong&gt;Data&lt;/strong&gt; module, which would import the &lt;strong&gt;App&lt;/strong&gt; module, which imports… argh. Circular dependency.&lt;/p&gt;
+
+&lt;p&gt;Still on the naive path, I thought I could just extract &lt;code class=&quot;highlighter-rouge&quot;&gt;Msg&lt;/code&gt; into a parameter of the function. That move made sense to me:  the &lt;strong&gt;Data&lt;/strong&gt; module should just retrieve the data and not worry about how the main &lt;strong&gt;App&lt;/strong&gt; will continue to process it. So this is what I thought I’d need:&lt;/p&gt;
+
+&lt;div class=&quot;language-haskell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;getData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Cmd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;getData&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;let&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://localhost:3001/people&quot;&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt;
+      &lt;span class=&quot;kt&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As you can see, the function now takes a parameter and should be invoked as &lt;code class=&quot;highlighter-rouge&quot;&gt;Data.getData NewData&lt;/code&gt; and produce a &lt;code class=&quot;highlighter-rouge&quot;&gt;Cmd Msg&lt;/code&gt; . Oh, how nice that would have been. The compiler and I had a slight disagreement about the correctness of this code:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Module build failed: Error: Compiler process exited with error Compilation failed
+-- TYPE MISMATCH ------------------------------------------------ ./src/Data.elm
+
+The 1st argument to &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;send&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; is causing a mismatch.
+
+22|       Http.send msg request
+                    ^^^
+Function &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;send&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; is expecting the 1st argument to be:
+
+    Result Http.Error a -&amp;gt; msg
+
+But it is:
+
+    msg
+
+Hint: It looks like a &lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;needs 1 more argument.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hmm? &lt;code class=&quot;highlighter-rouge&quot;&gt;send&lt;/code&gt; expects a function that takes a &lt;code class=&quot;highlighter-rouge&quot;&gt;Result&lt;/code&gt; with an &lt;code class=&quot;highlighter-rouge&quot;&gt;Http.Error&lt;/code&gt; and something (that is the ‘&lt;strong&gt;a&lt;/strong&gt;’ ) over to &lt;code class=&quot;highlighter-rouge&quot;&gt;msg&lt;/code&gt;?  That’s odd. I had to double check that I had not deleted more than I wanted since all I had really done was introducing a new parameter.&lt;/p&gt;
+
+&lt;h3 id=&quot;understanding-and-reasoning&quot;&gt;Understanding and reasoning&lt;/h3&gt;
+
+&lt;p&gt;It took me a while to grok what was going on here. I kept staring at it and thinking &lt;em&gt;“where is that function coming from?”&lt;/em&gt;. My first step was to just take what the compiler was saying for granted and changing the signature to match the error.&lt;/p&gt;
+
+&lt;div class=&quot;language-haskell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;getData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Result&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Cmd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;getData&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;let&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://localhost:3001/people&quot;&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt;
+      &lt;span class=&quot;kt&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Which lead to an error about send not really liking a &lt;code class=&quot;highlighter-rouge&quot;&gt;Result Http.Erro&lt;/code&gt;r a and preferring &lt;code class=&quot;highlighter-rouge&quot;&gt;Result Http.Error Response&lt;/code&gt;. Replacing that &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;Response&lt;/code&gt; made everything snap into motion. Bare with me.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;msg&lt;/code&gt; parameter of the above function definition is supposed to be the message type that I wanted to abstract away from. The one variant that I had there initially is &lt;code class=&quot;highlighter-rouge&quot;&gt;NewData (Result Http.Error Response)&lt;/code&gt;. That contains all the elements - though slightly rearranged - as the function that is passed as the first parameter to &lt;code class=&quot;highlighter-rouge&quot;&gt;getData&lt;/code&gt;. And that is it! &lt;code class=&quot;highlighter-rouge&quot;&gt;NewData&lt;/code&gt; is not an enum variant like in Java or Rust, it’s a &lt;strong&gt;type constructor&lt;/strong&gt;! It is a function that takes a &lt;code class=&quot;highlighter-rouge&quot;&gt;Result Http.Error Response&lt;/code&gt; and produces a new instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;Msg&lt;/code&gt;. Spelling that out in Elm is &lt;code class=&quot;highlighter-rouge&quot;&gt;(Result Http.Error Response -&amp;gt; Msg)&lt;/code&gt;. To not depend on the type itself, it is extracted both in the function and the resulting&lt;code class=&quot;highlighter-rouge&quot;&gt;Cmd msg&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This post might some long-winded followed by a very quick conclusion. Keep in mind, it took me a few hours and attempts to get to the point where it all &lt;code class=&quot;highlighter-rouge&quot;&gt;clicked&lt;/code&gt;. Then it was super easy. In hindsight, if I had just followed the compiler maybe the pieces would have fallen into place faster. Live and learn!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 12 Feb 2017 18:00:22 +0000</pubDate>
+        <link>http://felipesere.github.io//2017/the-elm-confusion/</link>
+        <guid isPermaLink="true">http://felipesere.github.io//2017/the-elm-confusion/</guid>
+        
+        <category>elm</category>
+        
+        
+      </item>
     
       <item>
         <title>Contemplating The Backlog</title>

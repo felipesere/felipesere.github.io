@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>The ELM Confusion</title>
+  <meta name="description" content="My path to craftsmanship.">
+  <meta name="author" content="Felipe Sere">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@felipesere">
+<meta name="twitter:creator" content="@felipesere">
+
+  <meta name="twitter:title" content="The ELM Confusion">
+
+
+<meta name="twitter:url" content="http://felipesere.github.io/2017/the-elm-confusion/">
+
+
+  <meta name="twitter:description" content="Today I think I may (possibly) have understood something about ELM. Before we look at some code, here is the 5sec intro into ELM: ELM is essentiall...">
+
+
+  <meta name="twitter:image" content="http://felipesere.github.io/images/profile.jpg">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Felipe Sere">
+  <meta property="og:description" content="My path to craftsmanship.">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://felipesere.github.io//2017/the-elm-confusion/">
+  <link rel="alternate" type="application/rss+xml" title="Felipe Sere" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/" title="link to home of Felipe Sere">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">Felipe Sere</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">My path to craftsmanship.</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to Felipe Sere blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+            
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/felipesere" title="@felipesere on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/felipesere" title="felipesere on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:felipe@8thlight.com" title="Email felipe@8thlight.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="12 Feb 2017" class="post-meta__date date">12 Feb 2017</time> <span class="post-meta__tags">on <a href="/tags/#elm">elm</a> </span>
+    </div>
+    <h1 class="post-title">The ELM Confusion</h1>
+  </header>
+
+  <section class="post">
+    <p>Today I think I may (possibly) have understood something about ELM. Before we look at some code, here is the 5sec intro into ELM: ELM is essentially a Haskell that runs in the browser. It makes an enormous effort to have a friendly and helpful compiler. And it succeeds at it! It promises zero runtime errors, has a strong type system and comes with a batteries-included architecture that is supposed to result in easy to maintain web apps.</p>
+
+<h3 id="the-setup">The setup</h3>
+
+<p>I am currently experimenting with porting a few Angular components over to ELM to see how it compares. One interesting aspect is that I get data from a remote system. From a previous experience, I had a hunch that ‘async’ code in ELM quickly got me confused with <code class="highlighter-rouge">Task</code>, <code class="highlighter-rouge">Cmd</code> and <code class="highlighter-rouge">Msg</code> (the last one is an app-specific custom type).</p>
+
+<p>But this time all went smooth. Here is the code to read some data from an endpoint and parsing the resulting JSON:</p>
+
+<div class="language-haskell highlighter-rouge"><pre class="highlight"><code><span class="n">getData</span> <span class="o">:</span> <span class="kt">Cmd</span> <span class="kt">Msg</span>
+<span class="n">getData</span> <span class="o">=</span>
+  <span class="kr">let</span>
+      <span class="n">url</span> <span class="o">=</span> <span class="s">"http://localhost:3001/people"</span>
+      <span class="n">request</span> <span class="o">=</span> <span class="kt">Http</span><span class="o">.</span><span class="n">get</span> <span class="n">url</span> <span class="kt">Data</span><span class="o">.</span><span class="n">decode</span>
+  <span class="kr">in</span>
+      <span class="kt">Http</span><span class="o">.</span><span class="n">send</span> <span class="kt">NewData</span> <span class="n">request</span>
+</code></pre>
+</div>
+
+<p>The focus point of this post will be that function and the inconspicuous NewData.NewData is a custom union type that represents what messages my application will react to:</p>
+
+<div class="language-haskell highlighter-rouge"><pre class="highlight"><code><span class="kr">type</span> <span class="kt">Msg</span>
+  <span class="o">=</span> <span class="kt">MorePeople</span>
+  <span class="o">|</span> <span class="kt">NewData</span> <span class="p">(</span><span class="kt">Result</span> <span class="kt">Http</span><span class="o">.</span><span class="kt">Error</span> <span class="kt">Response</span><span class="p">)</span>
+
+</code></pre>
+</div>
+
+<p>The above code was just happily living in the initial <strong>App.elm</strong> file, which was fine for the beginning.</p>
+
+<p>The challenge I set myself was to separate the concern <em>“getting data from a remote system”</em> from the general flow of my application, which is encoded in an <em>update</em> function and the corresponding <em>Msg</em> type.</p>
+
+<h3 id="naive-approach">Naive approach</h3>
+
+<p>Naive as I was, I just moved the <code class="highlighter-rouge">getData</code> function over to the <strong>Data.elm</strong> file (<em>a poor name in hindsight</em>) and fixed some of the imports. Sadly, the compiler was not happy about this:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>Error <span class="k">in</span> ./src/Main.elm
+Module build failed: Error: Compiler process exited with error Compilation failed
+-- NAMING ERROR ------------------------------------------------- ./src/Data.elm
+
+Cannot find variable <span class="sb">`</span>NewData<span class="sb">`</span>
+
+22|       Http.send NewData request
+                    ^^^^^^^
+Maybe you want one of the following?
+
+    getData
+
+-- NAMING ERROR ------------------------------------------------- ./src/Data.elm
+
+Cannot find <span class="nb">type</span> <span class="sb">`</span>Msg<span class="sb">`</span>
+
+16| getData : Cmd Msg
+                  ^^^
+</code></pre>
+</div>
+
+<p>OK. I can understand that. I’ve obviously not imported <code class="highlighter-rouge">Msg</code> and by extension <code class="highlighter-rouge">NewData</code>. Hmm.. That type lives in the <strong>App</strong> module, which imports the <strong>Data</strong> module, which would import the <strong>App</strong> module, which imports… argh. Circular dependency.</p>
+
+<p>Still on the naive path, I thought I could just extract <code class="highlighter-rouge">Msg</code> into a parameter of the function. That move made sense to me:  the <strong>Data</strong> module should just retrieve the data and not worry about how the main <strong>App</strong> will continue to process it. So this is what I thought I’d need:</p>
+
+<div class="language-haskell highlighter-rouge"><pre class="highlight"><code><span class="n">getData</span> <span class="o">:</span> <span class="n">msg</span> <span class="o">-&gt;</span> <span class="kt">Cmd</span> <span class="n">msg</span>
+<span class="n">getData</span> <span class="n">msg</span> <span class="o">=</span>
+  <span class="kr">let</span>
+      <span class="n">url</span> <span class="o">=</span> <span class="s">"http://localhost:3001/people"</span>
+      <span class="n">request</span> <span class="o">=</span> <span class="kt">Http</span><span class="o">.</span><span class="n">get</span> <span class="n">url</span> <span class="n">decode</span>
+  <span class="kr">in</span>
+      <span class="kt">Http</span><span class="o">.</span><span class="n">send</span> <span class="n">msg</span> <span class="n">request</span>
+</code></pre>
+</div>
+
+<p>As you can see, the function now takes a parameter and should be invoked as <code class="highlighter-rouge">Data.getData NewData</code> and produce a <code class="highlighter-rouge">Cmd Msg</code> . Oh, how nice that would have been. The compiler and I had a slight disagreement about the correctness of this code:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Module build failed: Error: Compiler process exited with error Compilation failed
+-- TYPE MISMATCH ------------------------------------------------ ./src/Data.elm
+
+The 1st argument to <span class="k">function</span> <span class="sb">`</span>send<span class="sb">`</span> is causing a mismatch.
+
+22|       Http.send msg request
+                    ^^^
+Function <span class="sb">`</span>send<span class="sb">`</span> is expecting the 1st argument to be:
+
+    Result Http.Error a -&gt; msg
+
+But it is:
+
+    msg
+
+Hint: It looks like a <span class="k">function </span>needs 1 more argument.
+</code></pre>
+</div>
+
+<p>Hmm? <code class="highlighter-rouge">send</code> expects a function that takes a <code class="highlighter-rouge">Result</code> with an <code class="highlighter-rouge">Http.Error</code> and something (that is the ‘<strong>a</strong>’ ) over to <code class="highlighter-rouge">msg</code>?  That’s odd. I had to double check that I had not deleted more than I wanted since all I had really done was introducing a new parameter.</p>
+
+<h3 id="understanding-and-reasoning">Understanding and reasoning</h3>
+
+<p>It took me a while to grok what was going on here. I kept staring at it and thinking <em>“where is that function coming from?”</em>. My first step was to just take what the compiler was saying for granted and changing the signature to match the error.</p>
+
+<div class="language-haskell highlighter-rouge"><pre class="highlight"><code><span class="n">getData</span> <span class="o">:</span> <span class="p">(</span><span class="kt">Result</span> <span class="kt">Http</span><span class="o">.</span><span class="kt">Error</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">msg</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cmd</span> <span class="n">msg</span>
+<span class="n">getData</span> <span class="n">msg</span> <span class="o">=</span>
+  <span class="kr">let</span>
+      <span class="n">url</span> <span class="o">=</span> <span class="s">"http://localhost:3001/people"</span>
+      <span class="n">request</span> <span class="o">=</span> <span class="kt">Http</span><span class="o">.</span><span class="n">get</span> <span class="n">url</span> <span class="n">decode</span>
+  <span class="kr">in</span>
+      <span class="kt">Http</span><span class="o">.</span><span class="n">send</span> <span class="n">msg</span> <span class="n">request</span>
+</code></pre>
+</div>
+
+<p>Which lead to an error about send not really liking a <code class="highlighter-rouge">Result Http.Erro</code>r a and preferring <code class="highlighter-rouge">Result Http.Error Response</code>. Replacing that <code class="highlighter-rouge">a</code> with a <code class="highlighter-rouge">Response</code> made everything snap into motion. Bare with me.</p>
+
+<p>The <code class="highlighter-rouge">msg</code> parameter of the above function definition is supposed to be the message type that I wanted to abstract away from. The one variant that I had there initially is <code class="highlighter-rouge">NewData (Result Http.Error Response)</code>. That contains all the elements - though slightly rearranged - as the function that is passed as the first parameter to <code class="highlighter-rouge">getData</code>. And that is it! <code class="highlighter-rouge">NewData</code> is not an enum variant like in Java or Rust, it’s a <strong>type constructor</strong>! It is a function that takes a <code class="highlighter-rouge">Result Http.Error Response</code> and produces a new instance of <code class="highlighter-rouge">Msg</code>. Spelling that out in Elm is <code class="highlighter-rouge">(Result Http.Error Response -&gt; Msg)</code>. To not depend on the type itself, it is extracted both in the function and the resulting<code class="highlighter-rouge">Cmd msg</code>.</p>
+
+<p>This post might some long-winded followed by a very quick conclusion. Keep in mind, it took me a few hours and attempts to get to the point where it all <code class="highlighter-rouge">clicked</code>. Then it was super easy. In hindsight, if I had just followed the compiler maybe the pieces would have fallen into place faster. Live and learn!</p>
+
+  </section>
+  <div class="share-page">
+  Feedback? Ideas? Comments? &#10145;
+    <a href="https://twitter.com/intent/tweet?text=The ELM Confusion&url=http://felipesere.github.io/2017/the-elm-confusion/&via=felipesere&related=felipesere" rel="nofollow" target="_blank" class="twitter-share-button" title="Share on Twitter">Twitter</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+  
+</article>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2017 Felipe Sere. All rights reserved.</span>
+</footer> 
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91069061-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    </div>
+  </body>
+</html>
