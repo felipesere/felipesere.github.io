@@ -5,9 +5,55 @@
     <description>My path to craftsmanship.</description>
     <link>http://felipesere.github.io//</link>
     <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 18 Feb 2017 10:40:25 +0000</pubDate>
-    <lastBuildDate>Sat, 18 Feb 2017 10:40:25 +0000</lastBuildDate>
+    <pubDate>Sat, 04 Mar 2017 12:13:15 +0000</pubDate>
+    <lastBuildDate>Sat, 04 Mar 2017 12:13:15 +0000</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Feedback app idea</title>
+        <description>&lt;p&gt;Today was a fairly ‘feedback-centric’ day for me. I had multiple conversations with different people. In some conversations, I was explicitly asking for feedback on a presentation that was given a few days ago. In others, people were asking me for feedback on where they currently are on their path to mastery and how to progress on it. And finally, in a different conversation we talked about our current feedback process, why we do it, what shortcomings it has and how we could improve it. All of this made me think about what makes feedback useful and whether or not the way we are collecting it adds or detracts value from that feedback.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-i-want-from-feedback&quot;&gt;What I want from feedback&lt;/h3&gt;
+
+&lt;p&gt;There is some provision for feedback that I feel need to be met for it to be useful:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It needs to timely. The gap between feedback rounds needs to be big enough to allow evolution, but small enough to keep people on track.&lt;/li&gt;
+  &lt;li&gt;It needs to be specific. The given feedback should be precise enough to derive potential adjustments to current behaviours.&lt;/li&gt;
+  &lt;li&gt;It needs to be individualised. At different times, different kinds of feedback will be most valuable. A generic form will more likely invite generic feedback.&lt;/li&gt;
+  &lt;li&gt;It needs to be effortless. The harder and more time consuming it is to give feedback, the less thought will be spent on giving timely, individual, and specific feedback.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With these thoughts in mind, I drafted out a few sketches of what I think an effective feedback tool might look like.&lt;/p&gt;
+
+&lt;h3 id=&quot;constructing-the-right-form&quot;&gt;Constructing the right form&lt;/h3&gt;
+
+&lt;p&gt;The first two steps are picking the right questions to ask the selecting the right group of people to ask. This should help with making the feedback &lt;em&gt;specific and individualised&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://felipesere.github.io/images/constructing-feedback-form.jpg&quot; alt=&quot;Constructing Feedback Form&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;An important part of these steps is to have a conversation about what areas need feedback. Without overwhelming with too many options, there should a few broad categories from where to choose questions from. The app should probably limit the number of questions down to 5-6 at most, to limit the time needed to provide the feedback. The next step allows the pair to pick the right people that are in the best position to give the feedback. This again should be limited to a small number to reduce the amount of disruption caused by giving feedback.&lt;/p&gt;
+
+&lt;h3 id=&quot;giving-and-using-feedback&quot;&gt;Giving and using feedback&lt;/h3&gt;
+
+&lt;p&gt;The constructed question is then sent via email (with a few reminders if needed?) to the selected group. Keeping the visuals minimal, and maybe even making it possible to reply via email will reduce the friction to giving feedback.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://felipesere.github.io/images/giving-feedback-screen.jpg&quot; alt=&quot;Giving Feedback Screen&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The last screen will show the collected feedback from the entire group. This screen will then be used during the feedback round by the group lead to guide the feedback conversation. It might be necessary to anonymize the feedback by not showing who actually sent it.&lt;/p&gt;
+
+&lt;p&gt;The above is just the sketch of an idea with a bit of wording. The next steps will be to come up with some very basic HTML to see what pages could look like in real life.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 03 Mar 2017 22:05:53 +0000</pubDate>
+        <link>http://felipesere.github.io//2017/feedback-app-idea/</link>
+        <guid isPermaLink="true">http://felipesere.github.io//2017/feedback-app-idea/</guid>
+        
+        <category>personal</category>
+        
+        <category>idea</category>
+        
+        
+      </item>
     
       <item>
         <title>The ELM Confusion</title>
