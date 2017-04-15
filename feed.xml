@@ -5,9 +5,41 @@
     <description>My path to craftsmanship.</description>
     <link>http://felipesere.github.io//</link>
     <atom:link href="http://felipesere.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 04 Mar 2017 12:13:15 +0000</pubDate>
-    <lastBuildDate>Sat, 04 Mar 2017 12:13:15 +0000</lastBuildDate>
+    <pubDate>Sat, 15 Apr 2017 23:34:56 +0100</pubDate>
+    <lastBuildDate>Sat, 15 Apr 2017 23:34:56 +0100</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>What Does A 4Hour Project Look Like?</title>
+        <description>&lt;p&gt;At my company, we get 4h per week (10% of our time) to work on anything we feel like will help us become better at what we do, will help the community of software developers or will help our company be a better place.&lt;/p&gt;
+
+&lt;p&gt;I have realized that I rarely work on our internal tools myself. Most of my time goes into exploring new languages or frameworks, preparing blogs or talks, contributing to internal discussions, or working on my current-pet-project-of-the-week. Those projects wind up half-baked in a week or two. And to be honest, I spend more time outside of the 4h on Friday on them.&lt;/p&gt;
+
+&lt;p&gt;After a few of these pet project - which I always wished other people picked up to give them the longevity they deserve - I started wondering what would make a successful 4h project.&lt;/p&gt;
+
+&lt;p&gt;The scenario I have in mind is the following: You get 4h per week to work on anything. Because you spotted a bug in an internal tool, you decide to take those 4h to debug and fix it. You go into Github, clone the repo… and now what? How long does it take you to get the project up and running? How long until you are familiar enough with the code base to do something meaningful? Can you get the change onto production within those 4hours?&lt;/p&gt;
+
+&lt;p&gt;This blog post is the first pass at some questions that I will ask some of my friends and coworkers to figure out what leads to a successful 4h project:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Language choice: Esoteric or established? Something that has a high likelihood to be used already?&lt;/li&gt;
+  &lt;li&gt;Frameworks: Is minimalism good? Or rather larger frameworks that cover more of the use cases that will be needed? Where is the line between value and bloat? And again: how does the degree of mainstreamness affect the choice? What impact do conventions (and possibly breaking them) have?&lt;/li&gt;
+  &lt;li&gt;Should we combine multiple languages/frameworks or stick to a single choice? What is the impact on the build system?&lt;/li&gt;
+  &lt;li&gt;Build tools setup: plugins or support for the most used development environments  (Vim, Emacs, Atom, Sublime, VSCode?)? Be able to run everything from the command line? Likelihood of reusing something that is already on the host machine? Ship the entire environment as part of a Vagrant box? What is the tradeoff between individual preference and homogenized “blessed” toolset? Does CI matter?&lt;/li&gt;
+  &lt;li&gt;Communication of design and tradeoffs: What needs to be in the README? How do we communicate previous decisions, assuming that different devs pick up the project? How do we help the next developer discover where the big pieces of code are? How do we establish conventions?&lt;/li&gt;
+  &lt;li&gt;How to create a shared understanding of the vision of the project? Empathy for the user? Establish a domain language?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of this should also be balanced with the fact that we can’t bombard the next developer with too much information. We have to avoid creating so much forest that we can’t spot a tree anymore.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned for more refinement on the 4h project and some ideas on how to progress towards that goal.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 15 Apr 2017 21:04:23 +0100</pubDate>
+        <link>http://felipesere.github.io//2017/what-does-a-4hour-project-look-like/</link>
+        <guid isPermaLink="true">http://felipesere.github.io//2017/what-does-a-4hour-project-look-like/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Feedback app idea</title>
